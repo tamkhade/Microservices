@@ -1,13 +1,18 @@
 package com.microservice.application.user;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class User {
+	
 	
 	
 	
 	private int id;
 	
+	@Size(min=2,message="Name should have at least 2 character")
 	private String firstName;
-	
+	@Size(min=5)
 	private String lastName;
 	
 

@@ -12,10 +12,11 @@ public class UserService {
 
 	List<User> liUser = new ArrayList<>();
 	
-	public void saveUserData(User user)
+	public User saveUserData(User user)
 	{
 		
 		liUser.add(user);
+		return user;
 	}
 	
 	public List<User> ListOfUser()
@@ -31,7 +32,7 @@ public class UserService {
 			return user;
 		}else
 		{
-			throw new UserNotFountException("Internal Server Error");
+			throw new UserNotFountException("id: "+id);
 		}
 	}
 	
