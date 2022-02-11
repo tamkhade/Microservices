@@ -3,6 +3,7 @@ package com.microservice.application.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,11 @@ public class UserController {
 	@GetMapping("/user/{id}")
 	public User getUser(@PathVariable int id)
 	{
-		  return userService.getData(id);
+	//HATEOAS 
+		
+		
+		//Resource<User>  resource = new Resource<User>
+		return userService.getData(id);
 		
 	}
 	
